@@ -1,0 +1,204 @@
+:root {
+    --mi-gradiant: linear-gradient(
+        150deg,
+        rgba(69, 152, 224, 1) 0%,
+        rgba(66, 179, 205, 1) 31%,
+        rgba(63, 212, 182, 1) 70%
+      );
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+.body{
+  width: 100%
+}
+.contact{
+  display:flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0 0 0 / .8),rgba(0 0 0 / .8)),url(../assets/images/jugando.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.container_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding:20px;
+  gap:10px;
+  width: 100%;
+}
+
+.box-info {
+  color:#fff;
+  display:flex;
+  flex-direction: column;
+  gap:50px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  text-align: left;
+  letter-spacing: 5px;
+  font-weight: bold;
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+  gap:25px
+}
+
+.data > p {
+  font-size: 1rem;
+}
+
+.data > p > i {
+  color:rgba(69, 152, 224, 1);
+  margin-right: 10px;
+  font-size:25px;
+}
+
+.links {
+  display:flex;
+  gap:15px;
+}
+
+.links > a {
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  background: rgba(69, 152, 224, 1);
+  text-align: center;
+  transition: .1s;
+}
+
+.link > i {
+  color:#fff;
+  line-height: 40px;
+  font-size: 20px;
+}
+
+form {
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+  gap:15px;
+  width: 50%;
+}
+
+.input-box {
+  position:relative;
+}
+
+.input-box > input {
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  outline:none;
+  background: rgba(255 255 255 / .1);
+  border:3px solid transparent;
+  letter-spacing: 1px;
+  transition:.3s;
+  color:#fff;
+  
+}
+
+.input-box > input::placeholder,
+.input-box > textarea::placeholder {
+  color:#a3a3a3;
+  
+}
+
+.input-box > input:focus::placeholder,
+.input-box > textarea:focus::placeholder {
+  color:transparent;
+}
+
+.input-box > input:focus,
+.input-box > textarea:focus {
+  border-bottom:3px solid rgba(69, 152, 224, 1);
+  animation: vibrar .4s;
+}
+
+.input-box > textarea {
+  width: 100%;
+  height: 130px;
+  padding: 10px;
+  background: rgba(255 255 255 / .1);
+  border:3px solid transparent;
+  letter-spacing: 1px;
+  outline: none;
+  transition:.3s;
+  color:#fff;
+  letter-spacing: 1.5px;
+}
+
+
+.input-box > i {
+  position:absolute;
+  top:50%;
+  transform: translateY(-50%);
+  right: 10px;
+  color:rgba(255 255 255 / .3);
+  transition: .3s;
+}
+
+/*puedo usar ~ como selector de hermano general o
+* + como selector de hermano adyacente
+*/
+.input-box > input:focus + i  {
+  color:rgba(69, 152, 224, 1);
+}
+
+
+.btn-form {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  background: rgba(63, 212, 182, 1);
+  color:#fff;
+  border:none;
+  transition: .1s;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-form:hover,
+.link:hover {
+  background: rgb(172, 16, 47);
+}
+
+@keyframes vibrar { 
+  0%, 100% {transform: translateX(0);} 
+  10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);} 
+  20%, 40%, 60%, 80% {transform: translateX(10px);} 
+}
+
+
+@media screen and (min-width:750px) {
+  .container_form{
+      width: 95%;
+      display: flex;
+      flex-direction: row;
+      gap:20px;
+  }
+
+  .box-info {
+      gap:15px;
+  }
+
+  .box-info > h1 {
+      font-size: 1.5rem;
+  }
+  
+}
